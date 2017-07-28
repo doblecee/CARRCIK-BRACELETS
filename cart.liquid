@@ -1,0 +1,150 @@
+{% when 1 or 3 or 5 or 10 or 12 %}
+  																									{% if hora > 6 %}
+																										 {% assign dia = dia | plus:1 %}
+  																										{% assign dia_envio = dia_envio | plus:1 %}
+																									{% endif %}
+  																									{% case dia %}
+  																										{% when 1 or 2 or 6 %}
+  																											{% assign dia_envio = dia_envio | plus:2 %}
+  																										{% when 4 %}
+  																											{% assign dia_envio = dia_envio | plus:4 %}
+  																										{% when 5 %}
+  																											{% assign dia_envio = dia_envio | plus:3 %}
+  																										{% else %}
+  																											{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endcase %}
+  																									{% if shipping_method.title == 'Envio 24 horas' %}
+  																									{% else %}
+  																										{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if dia_envio > 31 %}
+  																										{% assign dia_envio = dia_envio | minus:31 %}
+  																										{% assign mes_envio = mes_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if mes_envio > 12 %}
+  																										{% assign dia_envio = 1 %}
+  																									{% endif %}
+  																									{{ dia_envio }} de 
+  																									{% case mes_emvio %}
+  																										{% when 1 %}
+  																											Enero
+  																										{% when 2 %}
+  																											Febrero
+  																										{% when 3 %}
+  																											Marzo
+  																										{% when 4 %}
+  																											Abril
+  																										{% when 5 %}
+  																											Mayo
+  																										{% when 6 %}
+  																											Junio
+  																										{% when 9 %}
+  																											Septiembre
+  																										{% when 10 %}
+  																											Octubre
+  																										{% when 11 %}
+  																											Noviembre
+  																										{% else %}
+  																											Diciembre
+  																									{% endcase %}
+  																									{% when 4 or 6 or 9 or 11 %}
+  																									{% if hora > 6 %}
+																										 {% assign dia = dia | plus:1 %}
+  																										{% assign dia_envio = dia_envio | plus:1 %}
+																									{% endif %}
+  																									{% case dia %}
+  																										{% when 1 or 2 or 6 %}
+  																											{% assign dia_envio = dia_envio | plus:2 %}
+  																										{% when 4 %}
+  																											{% assign dia_envio = dia_envio | plus:4 %}
+  																										{% when 5 %}
+  																											{% assign dia_envio = dia_envio | plus:3 %}
+  																										{% else %}
+  																											{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endcase %}
+  																									{% if shipping_method.title == 'Envio 24 horas' %}
+  																									{% else %}
+  																										{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if dia_envio > 30 %}
+  																										{% assign dia_envio = dia_envio | minus:30 %}
+  																										{% assign mes_envio = mes_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if mes_envio > 12 %}
+  																										{% assign dia_envio = 1 %}
+  																									{% endif %}
+  																									{{ dia_envio }} de 
+  																									{% case mes_emvio %}
+  																										{% when 1 %}
+  																											Enero
+  																										{% when 2 %}
+  																											Febrero
+  																										{% when 3 %}
+  																											Marzo
+  																										{% when 4 %}
+  																											Abril
+  																										{% when 5 %}
+  																											Mayo
+  																										{% when 6 %}
+  																											Junio
+  																										{% when 9 %}
+  																											Septiembre
+  																										{% when 10 %}
+  																											Octubre
+  																										{% when 11 %}
+  																											Noviembre
+  																										{% else %}
+  																											Diciembre
+  																									{% endcase %}
+  																									{% when 2 %}
+  																									{% if hora > 6 %}
+																										 {% assign dia_envio = dia_envio | plus:1 %}
+  																										{% assign dia = dia | plus:1 %}
+																									{% endif %}
+  																									{% case dia %}
+  																										{% when 1 or 2 or 6 %}
+  																											{% assign dia_envio = dia_envio | plus:2 %}
+  																										{% when 4 %}
+  																											{% assign dia_envio = dia_envio | plus:4 %}
+  																										{% when 5 %}
+  																											{% assign dia_envio = dia_envio | plus:3 %}
+  																										{% else %}
+  																											{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endcase %}
+  																									{% if shipping_method.title == 'Envio 24 horas' %}
+  																									{% else %}
+  																										{% assign dia_envio = dia_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if dia_envio > 30 %}
+  																										{% assign dia_envio = dia_envio | minus:30 %}
+  																										{% assign mes_envio = mes_envio | plus:1 %}
+  																									{% endif %}
+  																									{% if mes_envio > 12 %}
+  																										{% assign dia_envio = 1 %}
+  																									{% endif %}
+  																									{{ dia_envio }} de 
+  																									{% case mes_emvio %}
+  																										{% when 1 %}
+  																											Enero
+  																										{% when 2 %}
+  																											Febrero
+  																										{% when 3 %}
+  																											Marzo
+  																										{% when 4 %}
+  																											Abril
+  																										{% when 5 %}
+  																											Mayo
+  																										{% when 6 %}
+  																											Junio
+  																										{% when 9 %}
+  																											Septiembre
+  																										{% when 10 %}
+  																											Octubre
+  																										{% when 11 %}
+  																											Noviembre
+  																										{% else %}
+  																											Diciembre
+  																									{% endcase %}
+																									{% else %}
+																									FALLOOOO
+																									{% endcase %}
